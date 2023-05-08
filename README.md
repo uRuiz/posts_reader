@@ -1,11 +1,12 @@
 # Posts Readers
 
-Aplicación para leer y marcar como favoritos un listado de posts consumidos de una API externa.
+Aplicación creada con Expo y React Native.
+
+La aplicación permite a los usuarios visualizar y gestionar una lista de publicaciones consumidas de una API externa. Además, los usuarios pueden ver los comentarios asociados a cada publicación y marcar o desmarcar publicaciones como favoritas. Las publicaciones favoritas salen destacandas en la parte superior. 
+
+Se ha decidido usar el contexto de React para manejar los estados de las publicaciones favoritas.
 
 ![image](https://user-images.githubusercontent.com/19885713/236798257-34cc980f-3a9e-4c81-bfb3-5efbb74e09c0.png) ![image](https://user-images.githubusercontent.com/19885713/236793407-61366258-fb7b-41c5-9e2a-f148ab1109db.png) ![image](https://user-images.githubusercontent.com/19885713/236798324-4a402b95-54b3-405c-9475-8c6d88394196.png)
-
-
-
 
 
 ## Requisitos
