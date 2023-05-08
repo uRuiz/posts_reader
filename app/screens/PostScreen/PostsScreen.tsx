@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import { FlatList, View } from "react-native";
+import { FlatList, View, Text } from "react-native";
 import { PostItem } from "../../components/PostItem/PostItem";
 import { PostModal } from "../../components/PostModal/PostModal";
 import { useGetPosts } from "../../hooks/useGetPosts";
@@ -48,6 +48,7 @@ export const PostsScreen = () => {
 
   return (
     <View style={styles.container} testID="posts-screen-container">
+      <Text style={styles.header}>Posts list</Text>
       <FlatList
         data={sortedPosts}
         renderItem={renderItem}
