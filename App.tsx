@@ -1,20 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { PostsScreen } from "./app/screens/PostScreen/PostsScreen";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { FavoritesProvider } from "./app/context/FavoritesContext";
 
-export default function App() {
+const App: React.FC = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <FavoritesProvider>
+      <SafeAreaProvider>
+        <SafeAreaView>
+          <PostsScreen />
+        </SafeAreaView>
+      </SafeAreaProvider>
+    </FavoritesProvider>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
