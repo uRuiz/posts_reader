@@ -2,7 +2,7 @@
 
 Aplicación para leer y marcar como favoritos un listado de posts consumidos de una API externa.
 
-![image](https://user-images.githubusercontent.com/19885713/236793352-21ce1d7f-9cae-431f-8e35-1476cf21682c.png) ![image](https://user-images.githubusercontent.com/19885713/236793407-61366258-fb7b-41c5-9e2a-f148ab1109db.png) ![image](https://user-images.githubusercontent.com/19885713/236793524-2976ed57-da4e-4a04-9145-1302b9abb73c.png)
+![image](https://user-images.githubusercontent.com/19885713/236798257-34cc980f-3a9e-4c81-bfb3-5efbb74e09c0.png) ![image](https://user-images.githubusercontent.com/19885713/236793407-61366258-fb7b-41c5-9e2a-f148ab1109db.png) ![image](https://user-images.githubusercontent.com/19885713/236798324-4a402b95-54b3-405c-9475-8c6d88394196.png)
 
 
 
