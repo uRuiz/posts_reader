@@ -1,4 +1,4 @@
-# Posts Readers
+# Posts Reader
 
 Aplicación creada con Expo y React Native.
 
