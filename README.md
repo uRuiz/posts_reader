@@ -14,13 +14,13 @@ Aplicación para leer y marcar como favoritos un listado de posts consumidos de 
 1. Clonar el repositorio:
 
 ```bash
-git clone https://github.com/your-username/your-project.git
+git clone https://github.com/uRuiz/posts_reader
 ```
 
 2. Instalar las dependencias:
 
 ```bash
-cd your-project
+cd posts_reader
 npm install
 ```
 
