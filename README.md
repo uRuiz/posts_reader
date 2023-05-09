@@ -37,6 +37,12 @@ npm install
 npx expo stat
 ```
 
+4. Ejecutar los tests:
+
+```bash
+npm run test
+```
+
 ## Estructura del Proyecto
 
 ```
