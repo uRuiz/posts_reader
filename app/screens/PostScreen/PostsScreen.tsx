@@ -30,9 +30,10 @@ export const PostsScreen = () => {
         post={item}
         onPress={() => setSelectedPost(item)}
         onPressFavorite={toggleFavoritePost}
+        isFavorite={favoritePosts.includes(item.id)}
       />
     ),
-    []
+    [favoritePosts]
   );
 
   const renderFooter = () => {

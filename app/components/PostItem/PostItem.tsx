@@ -9,13 +9,12 @@ interface PostItemProps {
   post: Post;
   onPress: (post: Post) => void;
   onPressFavorite: (postId: number) => void;
+  isFavorite: boolean;
 }
 
 export const PostItem: React.FC<PostItemProps> = memo(
-  ({ post, onPress, onPressFavorite }) => {
+  ({ post, onPress, onPressFavorite, isFavorite }) => {
     const { id, title, tags, reactions } = post;
-    const { favoritePosts } = useFavorites();
-    const isFavorite = favoritePosts.includes(id);
     return (
       <TouchableOpacity onPress={() => onPress(post)}>
         <View style={styles.container}>
