@@ -2,8 +2,9 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react-native";
 import { PostItem } from "../PostItem";
 import { FavoritesProvider } from "../../../context/FavoritesContext";
+import { Post } from "../../../types/types";
 
-const mockPost = {
+const mockPost: Post = {
   id: 1,
   title: "Test Title",
   body: "Test Body",
@@ -15,18 +16,31 @@ const mockPost = {
 const mockOnPress = jest.fn();
 const mockOnPressFavorite = jest.fn();
 
+interface PostItemComponentProps {
+  isFavorite?: boolean;
+  mockPostProp?: Post;
+}
+
+const PostItemComponent = ({
+  isFavorite = true,
+  mockPostProp = mockPost,
+}: PostItemComponentProps) => {
+  return render(
+    <FavoritesProvider>
+      <PostItem
+        post={mockPostProp}
+        onPress={mockOnPress}
+        onPressFavorite={mockOnPressFavorite}
+        isFavorite={isFavorite}
+      />
+    </FavoritesProvider>
+  );
+};
+
 describe("PostItem", () => {
   it("renders correctly", () => {
     // When
-    render(
-      <FavoritesProvider>
-        <PostItem
-          post={mockPost}
-          onPress={mockOnPress}
-          onPressFavorite={mockOnPressFavorite}
-        />
-      </FavoritesProvider>
-    );
+    PostItemComponent({});
 
     // Then
     expect(screen.getByText(mockPost.title)).toBeTruthy();
@@ -36,16 +50,7 @@ describe("PostItem", () => {
 
   it("calls onPress when pressed", () => {
     // When
-    render(
-      <FavoritesProvider>
-        <PostItem
-          post={mockPost}
-          onPress={mockOnPress}
-          onPressFavorite={mockOnPressFavorite}
-        />
-      </FavoritesProvider>
-    );
-
+    PostItemComponent({});
     // Then
     fireEvent.press(screen.getByText(mockPost.title));
     expect(mockOnPress).toHaveBeenCalledWith(mockPost);
@@ -53,15 +58,7 @@ describe("PostItem", () => {
 
   it("calls onPressFavorite when favorite button is pressed", () => {
     // When
-    render(
-      <FavoritesProvider>
-        <PostItem
-          post={mockPost}
-          onPress={mockOnPress}
-          onPressFavorite={mockOnPressFavorite}
-        />
-      </FavoritesProvider>
-    );
+    PostItemComponent({ isFavorite: false });
 
     // Then
     fireEvent.press(screen.getByTestId("non-favorite-icon"));
